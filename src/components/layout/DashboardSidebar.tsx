@@ -21,6 +21,7 @@ import {
   LogOut,
   Rocket,
   Settings,
+  Shield,
 } from 'lucide-react';
 import { Button } from '../ui/button';
 import * as auth from '@/lib/auth';
@@ -33,6 +34,7 @@ const navItems = [
   { href: '/dashboard/pitch-deck', icon: Presentation, label: 'Pitch Deck' },
   { href: '/dashboard/financial-summary', icon: AreaChart, label: 'Financials' },
   { href: '/dashboard/investor-materials', icon: Package, label: 'Investor Kit' },
+  { href: '/dashboard/admin', icon: Shield, label: 'Admin' },
 ];
 
 const bottomNavItems = [
@@ -59,11 +61,13 @@ export function DashboardSidebar() {
         </SidebarHeader>
         <SidebarContent>
             <SidebarMenu>
-            {navItems.map((item) => (
+            {navItems.map((item) => {
+              const isActive = item.href === '/dashboard' ? pathname === item.href : pathname.startsWith(item.href);
+              return (
                 <SidebarMenuItem key={item.href}>
                 <Link href={item.href}>
                     <SidebarMenuButton
-                    isActive={pathname === item.href}
+                    isActive={isActive}
                     tooltip={item.label}
                     >
                     <item.icon />
@@ -71,7 +75,8 @@ export function DashboardSidebar() {
                     </SidebarMenuButton>
                 </Link>
                 </SidebarMenuItem>
-            ))}
+              );
+            })}
             </SidebarMenu>
         </SidebarContent>
         <SidebarFooter className="gap-4">
