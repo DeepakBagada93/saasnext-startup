@@ -10,6 +10,17 @@ import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/hooks/use-toast';
 import * as auth from '@/lib/auth';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 
 type User = {
   name: string;
@@ -84,7 +95,23 @@ export default function ProfilePage() {
                     <p className='font-medium'>Log Out</p>
                     <p className='text-sm text-muted-foreground'>End your current session.</p>
                 </div>
-                 <Button variant="destructive" onClick={handleLogout}>Log Out</Button>
+                 <AlertDialog>
+                    <AlertDialogTrigger asChild>
+                       <Button variant="destructive">Log Out</Button>
+                    </AlertDialogTrigger>
+                    <AlertDialogContent>
+                      <AlertDialogHeader>
+                        <AlertDialogTitle>Are you sure you want to log out?</AlertDialogTitle>
+                        <AlertDialogDescription>
+                          You will be returned to the login page and your current session will be terminated.
+                        </AlertDialogDescription>
+                      </AlertDialogHeader>
+                      <AlertDialogFooter>
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+                        <AlertDialogAction onClick={handleLogout}>Log Out</AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
             </div>
           </div>
         </CardContent>
