@@ -1,12 +1,12 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ArrowRight, BrainCircuit, Presentation, AreaChart, Package } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { HeroSection } from '@/components/layout/HeroSection';
 
 const features = [
   {
@@ -57,24 +57,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="py-24 md:py-32">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold font-headline mb-4 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              Your 24/7 AI Chief of Staff for Founders
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
-              Plan strategies, generate pitch decks, and more with simple prompts.
-            </p>
-            <div className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-400">
-              <Button size="lg" asChild>
-                <Link href="/signup">
-                  Get Started
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* Features Section */}
         <section id="features" className="py-20 bg-secondary">
