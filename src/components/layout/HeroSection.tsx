@@ -6,9 +6,6 @@ import { Button } from '@/components/ui/button';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
 const AnimatedBrainSvg = () => (
     <svg
       viewBox="0 0 200 200"
@@ -81,6 +78,9 @@ export function HeroSection() {
   const heroRef = useRef(null);
 
   useEffect(() => {
+    // Register ScrollTrigger inside useEffect to ensure it runs only on the client
+    gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
       // Animate headline and CTA
       gsap.fromTo(
