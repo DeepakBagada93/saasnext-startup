@@ -51,12 +51,12 @@ Target Market: {{{targetMarket}}}
 Competitive Landscape: {{{competitiveLandscape}}}
 
 Respond in the format:
-```json
+\`\`\`json
 {
   "suggestedFrameworks": ["Framework 1", "Framework 2"],
   "marketInsights": "Relevant market insights..."
 }
-````,
+\`\`\``,
 });
 
 const strategyFrameworkSuggestionFlow = ai.defineFlow(
