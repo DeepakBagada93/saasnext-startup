@@ -1,3 +1,64 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract background for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1626908013351-800ddd734b8a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjB0ZWNofGVufDB8fHx8MTc2OTc3MDU2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract tech"
+    },
+    {
+      "id": "strategy-planner-feature",
+      "description": "Image for the Strategy Planner feature section",
+      "imageUrl": "https://images.unsplash.com/photo-1676276374289-5051ed04c77a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGxhbm5pbmclMjBib2FyZHxlbnwwfHx8fDE3Njk3ODI0OTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "planning board"
+    },
+    {
+      "id": "pitch-deck-feature",
+      "description": "Image for the Pitch Deck Generator feature section",
+      "imageUrl": "https://images.unsplash.com/photo-1590098563686-06ab8778a6a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcmVzZW50YXRpb24lMjBzbGlkZXxlbnwwfHx8fDE3Njk3MDY2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "presentation slide"
+    },
+    {
+      "id": "financial-summary-feature",
+      "description": "Image for the Financial Summary Tool feature section",
+      "imageUrl": "https://images.unsplash.com/photo-1504607798333-52a30db54a5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZmluYW5jaWFsJTIwY2hhcnR8ZW58MHx8fHwxNzY5NzQxNjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial chart"
+    },
+    {
+      "id": "investor-materials-feature",
+      "description": "Image for the Investor Materials Compilation feature section",
+      "imageUrl": "https://images.unsplash.com/photo-1764607913347-b63a06758999?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkb2N1bWVudCUyMGNvbGxlY3Rpb258ZW58MHx8fHwxNzY5NzgyNDk5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "document collection"
+    },
+    {
+      "id": "user-avatar-1",
+      "description": "User avatar for testimonials or profile pictures",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3Njk3NDY1MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "user-avatar-2",
+      "description": "User avatar for testimonials or profile pictures",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1559855603-ce4c8f480d76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2OTY4NzAwOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "pricing-tier-basic",
+      "description": "Icon for the basic pricing tier",
+      "imageUrl": "https://images.unsplash.com/photo-1641478865805-3e18c4e57157?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdGFydHVwJTIwcm9ja2V0fGVufDB8fHx8MTc2OTc4MjQ5OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "startup rocket"
+    },
+    {
+      "id": "pricing-tier-pro",
+      "description": "Icon for the pro pricing tier",
+      "imageUrl": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGdyb3d0aHxlbnwwfHx8fDE3Njk2ODIyODl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business growth"
+    },
+    {
+      "id": "pricing-tier-enterprise",
+      "description": "Icon for the enterprise pricing tier",
+      "imageUrl": "https://images.unsplash.com/photo-1594007336248-95440e3fde6d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29ycG9yYXRlJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzY5NzgyNDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "corporate building"
+    }
+  ]
 }
