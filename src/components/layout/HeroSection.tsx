@@ -134,7 +134,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative w-full min-h-[80vh] bg-gradient-to-b from-gray-50 to-white flex items-center justify-center overflow-hidden py-24 md:py-32">
+    <section ref={heroRef} className="relative w-full min-h-[80vh] bg-gradient-to-b from-secondary to-background flex items-center justify-center overflow-hidden py-24 md:py-32">
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div className="hero-content text-center md:text-left space-y-6">
                 <h1 className="text-4xl md:text-6xl font-bold font-headline">
