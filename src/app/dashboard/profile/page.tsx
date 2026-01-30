@@ -8,7 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Separator } from '@/components/ui/separator';
-import { toast } from '@/hooks/use-toast';
+import { useToast } from '@/hooks/use-toast';
 import * as auth from '@/lib/auth';
 
 type User = {
@@ -19,17 +19,27 @@ type User = {
 
 export default function ProfilePage() {
   const router = useRouter();
+  const { toast } = useToast();
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    setUser(auth.getUser());
-  }, []);
+    const currentUser = auth.getUser();
+    if (!currentUser) {
+      router.push('/login');
+    } else {
+      setUser(currentUser);
+    }
+  }, [router]);
 
   const handleLogout = () => {
     auth.logout();
     toast({ title: 'Logged Out', description: 'You have been successfully logged out.' });
     router.push('/login');
   };
+
+  if (!user) {
+    return null; // or a loading spinner
+  }
 
   return (
     <div className="animate-in fade-in-50 duration-500 max-w-2xl mx-auto">
@@ -41,12 +51,12 @@ export default function ProfilePage() {
         <CardContent className="space-y-6">
           <div className="flex items-center gap-4">
             <Avatar className="h-20 w-20">
-              <AvatarImage src={user?.avatar} alt={user?.name} />
-              <AvatarFallback>{user?.name?.charAt(0)}</AvatarFallback>
+              <AvatarImage src={user.avatar} alt={user.name} />
+              <AvatarFallback>{user.name?.charAt(0)}</AvatarFallback>
             </Avatar>
             <div className='space-y-1'>
-              <h3 className="text-xl font-semibold">{user?.name}</h3>
-              <p className="text-muted-foreground">{user?.email}</p>
+              <h3 className="text-xl font-semibold">{user.name}</h3>
+              <p className="text-muted-foreground">{user.email}</p>
             </div>
             <Button variant="outline" className="ml-auto">Change Picture</Button>
           </div>
@@ -56,11 +66,11 @@ export default function ProfilePage() {
           <div className="space-y-4">
             <div className="grid gap-2">
               <Label htmlFor="name">Full Name</Label>
-              <Input id="name" defaultValue={user?.name} />
+              <Input id="name" defaultValue={user.name} />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input id="email" type="email" defaultValue={user?.email} readOnly />
+              <Input id="email" type="email" defaultValue={user.email} readOnly />
             </div>
           </div>
           <Button>Save Changes</Button>

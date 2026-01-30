@@ -51,9 +51,9 @@ export default function DashboardPage() {
         <p className="text-muted-foreground">Here are your tools to build and grow.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {tools.map((tool) => (
-          <Card key={tool.title} className="flex flex-col">
+          <Card key={tool.title} className="flex flex-col hover:shadow-md transition-shadow">
             <CardHeader>
               {tool.icon}
               <CardTitle className="mt-4 font-headline">{tool.title}</CardTitle>
