@@ -32,7 +32,7 @@ const recentItems = [
 
 export default function DashboardPage() {
   const [userName, setUserName] = useState('');
-  const [isPremium, setIsPremium] = useState(false); 
+  const [isPremium, setIsPremium] = useState(false);
 
   useEffect(() => {
     const user = auth.getUser();
@@ -45,9 +45,12 @@ export default function DashboardPage() {
 
   return (
     <div className="animate-in fade-in-50 duration-500 space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold font-headline">Welcome back, {userName}</h1>
-        <p className="text-muted-foreground">Ready to build something amazing today?</p>
+      <div className="relative overflow-hidden rounded-xl bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-background to-secondary border p-8">
+        <div className="relative z-10">
+          <h1 className="text-3xl font-bold font-headline mb-2">Welcome back, {userName}</h1>
+          <p className="text-muted-foreground max-w-xl">Ready to build something amazing today? Your AI Chief of Staff is standing by.</p>
+        </div>
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
       </div>
 
       {!isPremium && (
@@ -56,12 +59,12 @@ export default function DashboardPage() {
           <AlertTitle className="font-headline text-accent">Upgrade to Pro</AlertTitle>
           <AlertDescription>
             <div className="flex flex-wrap justify-between items-center gap-2">
-                <span>Unlock unlimited exports, advanced models, and premium templates.</span>
-                <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                    <Link href="/pricing">
-                    Upgrade Now <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                </Button>
+              <span>Unlock unlimited exports, advanced models, and premium templates.</span>
+              <Button asChild size="sm" className="bg-accent text-accent-foreground hover:bg-accent/90">
+                <Link href="/pricing">
+                  Upgrade Now <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </AlertDescription>
         </Alert>
@@ -69,21 +72,21 @@ export default function DashboardPage() {
 
       <Card className="shadow-md">
         <CardHeader>
-            <CardTitle className="font-headline text-xl flex items-center gap-2">
-                <Wand2 className="h-6 w-6 text-primary" />
-                Quick-Start
-            </CardTitle>
-            <CardDescription>
-                What strategic task can I help you with? Try &quot;Draft a go-to-market plan for a new SaaS product.&quot;
-            </CardDescription>
+          <CardTitle className="font-headline text-xl flex items-center gap-2">
+            <Wand2 className="h-6 w-6 text-primary" />
+            Quick-Start
+          </CardTitle>
+          <CardDescription>
+            What strategic task can I help you with? Try &quot;Draft a go-to-market plan for a new SaaS product.&quot;
+          </CardDescription>
         </CardHeader>
         <CardContent>
-             <form>
-                <div className="relative">
-                    <Input placeholder="Tell me what you want to create..." className="pr-28 h-12 text-base"/>
-                    <Button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2">Generate</Button>
-                </div>
-            </form>
+          <form>
+            <div className="relative">
+              <Input placeholder="Tell me what you want to create..." className="pr-28 h-12 text-base" />
+              <Button type="submit" className="absolute right-2 top-1/2 -translate-y-1/2">Generate</Button>
+            </div>
+          </form>
         </CardContent>
       </Card>
 
@@ -105,13 +108,13 @@ export default function DashboardPage() {
               </Card>
             </Link>
           ))}
-            <div className="border-2 border-dashed bg-secondary hover:border-primary/50 transition-all rounded-lg h-full flex items-center justify-center text-center">
-                <div className="p-6">
-                    <Package className="h-8 w-8 mx-auto text-muted-foreground mb-2"/>
-                    <p className="text-muted-foreground font-medium">Start a new project</p>
-                    <p className="text-xs text-muted-foreground">using your tools.</p>
-                </div>
+          <div className="border-2 border-dashed bg-secondary hover:border-primary/50 transition-all rounded-lg h-full flex items-center justify-center text-center">
+            <div className="p-6">
+              <Package className="h-8 w-8 mx-auto text-muted-foreground mb-2" />
+              <p className="text-muted-foreground font-medium">Start a new project</p>
+              <p className="text-xs text-muted-foreground">using your tools.</p>
             </div>
+          </div>
         </div>
       </div>
     </div>

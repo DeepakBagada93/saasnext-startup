@@ -41,13 +41,13 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-secondary p-4">
+    <div className="flex min-h-screen items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background p-4">
       <div className="w-full max-w-md animate-in fade-in-50 zoom-in-95 duration-500">
         <div className="text-center mb-6">
-            <Link href="/" className="inline-flex items-center space-x-2">
-                <Rocket className="h-8 w-8 text-primary" />
-                <span className="text-2xl font-bold font-headline">Startup Ally</span>
-            </Link>
+          <Link href="/" className="inline-flex items-center space-x-2">
+            <Rocket className="h-8 w-8 text-primary" />
+            <span className="text-2xl font-bold font-headline">Startup Ally</span>
+          </Link>
         </div>
         <Card>
           <CardHeader>
